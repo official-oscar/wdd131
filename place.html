@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigeria - W03 Assignment</title>
+    <meta name="description" content="Learn about Nigeria with facts,culture, and a featured image of Zuma Rock. Explore data and weather for the region.">
+    <meta name="author" content="Osarugue Uwagboe">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/nigeria-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/nigeria-medium.webp" media="(min-width: 500px)">
+                <img src="images/nigeria-small.webp" alt="Zuma Rock in Nigeria">
+            </picture>
+        </div>
+
+        <section class="data">
+            <h2>Data</h2>
+            <p><strong>Area:</strong> 923,769 sq km</p>
+            <p><strong>Population:</strong> 223,800,000</p>
+            <p><strong>Capital:</strong> Abuja</p>
+            <p><strong>Languages:</strong> English, Hausa, Igbo, Yoruba</p>
+            <p><strong>Currency:</strong> Naira</p>
+        </section>
+
+        <section class="weather">
+            <h2>Weather <span class="weather-icon-mobile"><img src="images/cloudy.svg" alt="weather icon"></span></h2>
+            <p><strong>Temperature:</strong> <span id="temp">8</span>°C</p>
+            <p><strong>Conditions:</strong> Partly Cloudy</p>
+            <p><strong>Wind:</strong> <span id="wind">10</span> km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> | Last Modified: <span id="lastmodified"></span></p>
+    </footer>
+</body>
+
+</html>
