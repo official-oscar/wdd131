@@ -50,15 +50,17 @@ h2 {
 }
 
 .weather h2::after {
-    content: "⛅";
+    content: "";
     margin-left: 0.5rem;
 }
 
 .weather-icon-mobile {
     display: inline;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     vertical-align: middle;
+    margin-left: 0.5rem;
+    fill: var(--primary-color);
 }
 
 @media screen and (min-width: 500px) {
