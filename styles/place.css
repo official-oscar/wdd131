@@ -56,6 +56,9 @@ h2 {
 
 .weather-icon-mobile {
     display: inline;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
 }
 
 @media screen and (min-width: 500px) {
@@ -88,6 +91,10 @@ h2 {
 
     .weather-icon-mobile {
         display: none;
+    }
+
+    .weather h2::after {
+        content: " ⛅";
     }
 
 }
