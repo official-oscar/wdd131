@@ -76,7 +76,7 @@ const title = document.querySelector("main h2");
 
 function displayTemples(filteredTemples) {
     container.innerHTML = "";
-    title.textContent = "All Temples";
+    // title.textContent = "All Temples";
 
     filteredTemples.forEach(temple => {
         const card = document.createElement("section");
@@ -87,7 +87,7 @@ function displayTemples(filteredTemples) {
       <p><strong>Location:</strong> ${temple.location}</p>
       <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
       <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+      <img src="${temple.imageUrl}" alt="${temple.templeName} Temple in ${temple.location}" loading="lazy">
     `;
 
         container.appendChild(card);
@@ -115,7 +115,7 @@ function filterTemples(filter) {
     } else if (filter === "small") {
         filtered = temples.filter(temple => temple.area < 10000);
         title.textContent = "Small Temples";
-    } else { // home
+    } else {
         filtered = temples;
         title.textContent = "All Temples";
     }
