@@ -123,9 +123,10 @@ function filterTemples(filter) {
     displayTemples(filtered);
 }
 
-document.querySelectorAll("nav button").forEach(button => {
-    button.addEventListener("click", () => {
-        const filter = button.dataset.filter;
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const filter = link.dataset.filter;
         filterTemples(filter);
     });
 });

@@ -17,14 +17,30 @@ header {
     text-align: center;
 }
 
-nav button {
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
     background: var(--accent);
     color: white;
-    border: none;
+    text-decoration: none;
     padding: .5rem 1rem;
-    margin: .25rem;
-    cursor: pointer;
     border-radius: 4px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: #c75e4a;
+    transform: scale(1.05);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .grid {

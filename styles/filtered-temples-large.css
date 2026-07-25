@@ -1,9 +1,12 @@
-.grid {
-    grid-template-columns: repeat(3, 1fr);
-}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
 }
