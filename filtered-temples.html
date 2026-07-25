@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album - Filtered</title>
+    <meta name="description" content="Filtered temple album with JavaScript">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 768px)">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <nav>
+            <button data-filter="home">Home</button>
+            <button data-filter="old">Old</button>
+            <button data-filter="new">New</button>
+            <button data-filter="large">Large</button>
+            <button data-filter="small">Small</button>
+        </nav>
+    </header>
+
+    <main>
+        <h2>All Temples</h2>
+        <div id="temple-container" class="grid"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Osarugue Uwagboe</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
