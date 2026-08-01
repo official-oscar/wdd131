@@ -1,0 +1,182 @@
+:root {
+    --primary: #3d1a3a;
+    --secondary: #f0e6f0;
+    --light: #ffffff;
+    --text: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    line-height: 1.5;
+    background-color: #fafafa;
+}
+
+header,
+footer {
+    background-color: var(--primary);
+    color: var(--light);
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+footer {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+main {
+    padding: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    background-color: var(--secondary);
+    padding: 1.25rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+label,
+legend {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.15rem;
+    font-size: 0.95rem;
+}
+
+.optional {
+    font-weight: 400;
+    font-style: italic;
+    color: #555;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    font-size: 2.2rem;
+    flex-direction: row-reverse;
+    padding: 0.5rem 0;
+}
+
+.rating label {
+    color: #bbb;
+    cursor: pointer;
+    transition: color 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 900;
+    font-size: 1.4rem;
+}
+
+.rating label:hover,
+.rating label:hover~label {
+    color: gold;
+}
+
+.rating input[type="radio"]:checked~label {
+    color: gold;
+}
+
+.rating input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+/* When you hover a star, it turns gold */
+.rating label:hover {
+    color: gold;
+}
+
+/* Checkboxes */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 400;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 0.5rem;
+    transition: background 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #2a1228;
+}
