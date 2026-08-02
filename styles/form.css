@@ -1,8 +1,12 @@
 :root {
-    --primary: #3d1a3a;
+    --primary: #6a4fff;
     --secondary: #f0e6f0;
     --light: #ffffff;
     --text: #333;
+    --border: #cccccc;
+    --muted: #555;
+    --bg: #fafafa;
+    --hover: #2a1228;
 }
 
 * {
@@ -15,7 +19,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text);
     line-height: 1.5;
-    background-color: #fafafa;
+    background-color: var(--bg);
 }
 
 header,
@@ -73,7 +77,7 @@ legend {
 .optional {
     font-weight: 400;
     font-style: italic;
-    color: #555;
+    color: var(--muted);
 }
 
 input[type="text"],
@@ -82,7 +86,7 @@ select,
 textarea {
     width: 100%;
     padding: 0.6rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border);
     border-radius: 4px;
     font-size: 1rem;
     font-family: inherit;
@@ -97,34 +101,25 @@ fieldset {
     gap: 0.3rem;
 }
 
+/* RATING STARS - BOLD + WORKING */
 .rating {
     display: flex;
     justify-content: space-around;
     gap: 1rem;
-    font-size: 2.2rem;
     flex-direction: row-reverse;
     padding: 0.5rem 0;
 }
 
 .rating label {
-    color: #bbb;
-    cursor: pointer;
-    transition: color 0.2s;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.3rem;
+    font-size: 1rem;
     font-weight: 900;
-    font-size: 1.4rem;
-}
-
-.rating label:hover,
-.rating label:hover~label {
-    color: gold;
-}
-
-.rating input[type="radio"]:checked~label {
-    color: gold;
+    color: #bbbbbb;
+    cursor: pointer;
+    transition: color 0.2s;
 }
 
 .rating input[type="radio"] {
@@ -134,25 +129,35 @@ fieldset {
     cursor: pointer;
 }
 
-/* When you hover a star, it turns gold */
-.rating label:hover {
+/* Gold on hover */
+.rating label:hover,
+.rating label:hover~label {
+    color: gold;
+}
+
+/* Gold when selected */
+.rating:has(input:checked) label {
+    color: #bbbbbb;
+}
+
+.rating:has(input:checked) label:has(input:checked),
+.rating:has(input:checked) label:has(input:checked)~label {
     color: gold;
 }
 
 /* Checkboxes */
 .checkbox-group {
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0.3rem 0;
 }
 
 .checkbox-group label {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
     font-weight: 400;
     font-size: 1.05rem;
     cursor: pointer;
+    margin: 0;
 }
 
 .checkbox-group input[type="checkbox"] {
@@ -178,5 +183,5 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #2a1228;
+    background-color: var(--hover);
 }
