@@ -185,3 +185,8 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: var(--hover);
 }
+
+.required {
+    color: red;
+    font-weight: bold;
+}

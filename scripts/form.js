@@ -1,3 +1,4 @@
+// Array of products
 const products = [
     { id: "fc-1888", name: "Flux Capacitor", averagerating: 4.5 },
     { id: "fc-2050", name: "Power Laces", averagerating: 4.7 },
@@ -6,13 +7,24 @@ const products = [
     { id: "jj-1969", name: "Warp Equalizer", averagerating: 5.0 }
 ];
 
+// 1. Populate Product Select
 const productSelect = document.querySelector("#productName");
 products.forEach(product => {
     const option = document.createElement("option");
-    option.value = product.name;
+    option.value = product.id;
     option.textContent = product.name;
     productSelect.appendChild(option);
 });
 
-const lastModified = document.querySelector("#lastModified");
-lastModified.textContent = `Last Modification: ${document.lastModified}`;
+// 2. localStorage to track completed reviews
+const reviewCount = document.querySelector("#lastModified"); // we'll reuse footer
+let count = localStorage.getItem("reviewCount") || 0;
+
+// When form is submitted, increment count
+document.querySelector("form").addEventListener("submit", () => {
+    count++;
+    localStorage.setItem("reviewCount", count);
+});
+
+// Display count in footer
+document.querySelector("#lastModified").textContent = `Reviews Completed: ${count}`;
